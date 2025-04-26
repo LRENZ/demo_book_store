@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Shopping Cart</h1>
+
+    {% if cart_items %}
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Cart Items -->
+            <div class="lg:col-span-8">
+                <div class="bg-white shadow-sm rounded-lg">
+                    {% for item in cart_items %}
+                    <div class="p-6 {% if not loop.last %}border-b border-gray-200{% endif %}">
+                        <div class="flex items-center">
+                            <img src="{{ item.image_urls[0] }}"
+                                 alt="{{ item.name }}"
+                                 class="w-20 h-20 object-cover rounded-lg">
+                            
+                            <div class="ml-6 flex-1">
+                                <h3 class="text-lg font-medium text-gray-900">
+                                    <a href="{{ url_for('product_detail', product_id=item.id) }}"
+                                       class="hover:text-indigo-600">
+                                        {{ item.name }}
+                                    </a>
+                                </h3>
+                                
+                                <div class="mt-1 text-sm text-gray-600">
+                                    {% for variant in item.variants %}
+                                    <span class="mr-4">{{ variant.type }}: {{ variant.options[0] }}</span>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="mt-4 flex items-center justify-between">
+                                    <div class="flex items-center border rounded-md">
+                                        <button class="px-3 py-1 text-gray-600 hover:text-gray-700">-</button>
+                                        <span class="px-3 py-1 text-gray-900">{{ item.quantity }}</span>
+                                        <button class="px-3 py-1 text-gray-600 hover:text-gray-700">+</button>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <span class="text-lg font-medium text-gray-900">
+                                            ${{ "%.2f"|format(item.price * item.quantity) }}
+                                        </span>
+                                        <button class="ml-4 text-gray-400 hover:text-red-500">
+                                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:col-span-4">
+                <div class="bg-white shadow-sm rounded-lg p-6">
+                    <h2 class="text-lg font-medium text-gray-900">Order Summary</h2>
+                    
+                    <dl class="mt-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <dt class="text-sm text-gray-600">Subtotal</dt>
+                            <dd class="text-sm font-medium text-gray-900">${{ "%.2f"|format(cart_total) }}</dd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <dt class="text-sm text-gray-600">Shipping</dt>
+                            <dd class="text-sm font-medium text-gray-900">$0.00</dd>
+                        </div>
+                        
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <dt class="text-base font-medium text-gray-900">Order total</dt>
+                            <dd class="text-base font-medium text-gray-900">${{ "%.2f"|format(cart_total) }}</dd>
+                        </div>
+                    </dl>
+
+                    <div class="mt-6">
+                        <a href="{{ url_for('checkout') }}"
+                           class="block w-full bg-indigo-600 text-white px-4 py-3 rounded-md text-center font-medium hover:bg-indigo-700">
+                            Proceed to Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="text-center py-12">
+            <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <h3 class="mt-2 text-lg font-medium text-gray-900">Your cart is empty</h3>
+            <p class="mt-1 text-gray-500">Start shopping to add items to your cart.</p>
+            <div class="mt-6">
+                <a href="{{ url_for('index') }}"
+                   class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    Continue Shopping
+                </a>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

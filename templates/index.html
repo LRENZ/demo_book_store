@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Store - Modern E-commerce</title>
+    <meta name="description" content="Shop the latest products at our modern e-commerce store">
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center">
+                    <span class="text-xl font-bold text-gray-900">Our Store</span>
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/category/electronics" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Electronics</a>
+                    <a href="/category/clothing" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Clothing</a>
+                    <a href="/category/books" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Books</a>
+                </nav>
+                <a href="/cart" class="flex items-center text-gray-600 hover:text-gray-900">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <section class="bg-gray-900 text-white rounded-lg shadow-xl mb-12">
+        <div class="px-8 py-12 max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Our Store</h1>
+            <p class="text-xl text-gray-300 mb-8">Discover amazing products at great prices</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="/category/electronics" class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
+                    <h2 class="text-xl font-semibold mb-2">Electronics</h2>
+                    <p class="text-gray-400">Browse our electronics collection</p>
+                </a>
+                <a href="/category/clothing" class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
+                    <h2 class="text-xl font-semibold mb-2">Clothing</h2>
+                    <p class="text-gray-400">Browse our clothing collection</p>
+                </a>
+                <a href="/category/books" class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
+                    <h2 class="text-xl font-semibold mb-2">Books</h2>
+                    <p class="text-gray-400">Browse our books collection</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section>
+        <h2 class="text-2xl font-bold mb-8">Featured Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card: Laptop -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/prod1">
+                    <img src="/static/images/placeholder-laptop-1.jpg" alt="High-Performance Laptop" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">High-Performance Laptop</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$1,299.99</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">
+                                    ★★★★★
+                                </div>
+                                <span class="text-sm text-gray-600 ml-2">(150)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Card: Headphones -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/prod2">
+                    <img src="/static/images/placeholder-headphones-1.jpg" alt="Wireless Noise-Cancelling Headphones" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Wireless Noise-Cancelling Headphones</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$249.99</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">
+                                    ★★★★★
+                                </div>
+                                <span class="text-sm text-gray-600 ml-2">(320)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Card: T-Shirt -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/prod3">
+                    <img src="/static/images/placeholder-tshirt-1.jpg" alt="Men's Casual T-Shirt" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Men's Casual T-Shirt</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$25.00</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">
+                                    ★★★★
+                                </div>
+                                <span class="text-sm text-gray-600 ml-2">(85)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Card: Book -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/prod4">
+                    <img src="/static/images/placeholder-book-1.jpg" alt="The Mystery Novel" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">The Mystery Novel</h3>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$14.99</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">
+                                    ★★★★★
+                                </div>
+                                <span class="text-sm text-gray-600 ml-2">(210)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-auto">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                    <p class="text-gray-300">Your trusted source for quality products at great prices.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="/category/electronics" class="text-gray-300 hover:text-white">Electronics</a></li>
+                        <li><a href="/category/clothing" class="text-gray-300 hover:text-white">Clothing</a></li>
+                        <li><a href="/category/books" class="text-gray-300 hover:text-white">Books</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-300">Email: contact@ourstore.com</p>
+                    <p class="text-gray-300">Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 Our Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

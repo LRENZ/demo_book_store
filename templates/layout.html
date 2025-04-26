@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title or 'Our Store - Modern E-commerce' }}</title>
+    <meta name="description" content="{{ page_description or 'Shop the latest products at our modern e-commerce store' }}">
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+    {% include 'components/header.html' %}
+    
+    <main class="flex-grow container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'components/footer.html' %}
+</body>
+</html>

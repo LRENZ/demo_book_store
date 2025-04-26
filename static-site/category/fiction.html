@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiction Books - BookHaven</title>
+    <meta name="description" content="Explore our collection of fiction books at BookHaven">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center">
+                    <span class="text-xl font-bold text-gray-900">BookHaven</span>
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/category/fiction" class="text-blue-600 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">Fiction</a>
+                    <a href="/category/non-fiction" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Non-Fiction</a>
+                    <a href="/category/children" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Children's Books</a>
+                    <a href="/category/academic" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Academic</a>
+                </nav>
+                <a href="/cart" class="flex items-center text-gray-600 hover:text-gray-900">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="text-gray-500 mb-8">
+            <ol class="list-none p-0 flex items-center space-x-2">
+                <li><a href="/" class="hover:text-gray-700">Home</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li class="text-gray-900">Fiction</li>
+            </ol>
+        </nav>
+
+        <!-- Category Header -->
+        <div class="mb-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">Fiction Books</h1>
+            <p class="text-gray-600">Explore our collection of novels, short stories, and literary masterpieces</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-4 mb-8">
+            <select class="border rounded-md px-4 py-2">
+                <option>Sort by: Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Customer Rating</option>
+                <option>New Releases</option>
+            </select>
+            <select class="border rounded-md px-4 py-2">
+                <option>Genre: All Fiction</option>
+                <option>Literary Fiction</option>
+                <option>Mystery & Thriller</option>
+                <option>Science Fiction</option>
+                <option>Fantasy</option>
+                <option>Romance</option>
+            </select>
+        </div>
+
+        <!-- Book Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Book Card: The Midnight Library -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/midnight-library">
+                    <img src="/static/images/placeholder-book-1.jpg" alt="The Midnight Library by Matt Haig - A Novel about Infinite Possibilities" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">The Midnight Library</h3>
+                        <p class="text-sm text-gray-600 mb-2">By Matt Haig</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$16.99</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">★★★★★</div>
+                                <span class="text-sm text-gray-600 ml-2">(1,250)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Book Card: Project Hail Mary -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/project-hail-mary">
+                    <img src="/static/images/placeholder-book-1.jpg" alt="Project Hail Mary by Andy Weir - A Science Fiction Masterpiece" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Project Hail Mary</h3>
+                        <p class="text-sm text-gray-600 mb-2">By Andy Weir</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$18.99</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">★★★★★</div>
+                                <span class="text-sm text-gray-600 ml-2">(892)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Book Card: The Seven Husbands of Evelyn Hugo -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/evelyn-hugo">
+                    <img src="/static/images/placeholder-book-1.jpg" alt="The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid - A Hollywood Romance" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">The Seven Husbands of Evelyn Hugo</h3>
+                        <p class="text-sm text-gray-600 mb-2">By Taylor Jenkins Reid</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$14.99</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">★★★★★</div>
+                                <span class="text-sm text-gray-600 ml-2">(2,150)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Book Card: Tomorrow, and Tomorrow, and Tomorrow -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a href="/product/tomorrow">
+                    <img src="/static/images/placeholder-book-1.jpg" alt="Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin - A Story of Love and Gaming" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Tomorrow, and Tomorrow, and Tomorrow</h3>
+                        <p class="text-sm text-gray-600 mb-2">By Gabrielle Zevin</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-900">$17.99</span>
+                            <div class="flex items-center">
+                                <div class="flex items-center text-yellow-400">★★★★★</div>
+                                <span class="text-sm text-gray-600 ml-2">(756)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- More book cards... -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center">
+            <nav class="flex items-center space-x-2">
+                <a href="#" class="px-4 py-2 border rounded-md text-gray-600 hover:bg-gray-50">Previous</a>
+                <a href="#" class="px-4 py-2 border rounded-md bg-blue-600 text-white">1</a>
+                <a href="#" class="px-4 py-2 border rounded-md text-gray-600 hover:bg-gray-50">2</a>
+                <a href="#" class="px-4 py-2 border rounded-md text-gray-600 hover:bg-gray-50">3</a>
+                <span class="px-4 py-2 text-gray-600">...</span>
+                <a href="#" class="px-4 py-2 border rounded-md text-gray-600 hover:bg-gray-50">8</a>
+                <a href="#" class="px-4 py-2 border rounded-md text-gray-600 hover:bg-gray-50">Next</a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t mt-12">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About BookHaven</h3>
+                    <p class="text-gray-600">Your trusted source for quality books at great prices.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">New Releases</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Bestsellers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Award Winners</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Book Club Picks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-600 mb-4">Subscribe to receive updates on new releases and special offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t text-center text-gray-600">
+                <p>&copy; 2025 BookHaven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

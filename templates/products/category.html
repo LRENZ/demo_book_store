@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% from 'components/product_card.html' import render_product_card %}
+{% from 'components/breadcrumbs.html' import render_breadcrumbs %}
+
+{% block content %}
+    {{ render_breadcrumbs(breadcrumbs) }}
+
+    <header class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">{{ category.name }}</h1>
+        <p class="mt-2 text-gray-600">Browse our collection of {{ category.name.lower() }}</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {% for product in products %}
+            {{ render_product_card(product) }}
+        {% else %}
+            <p class="col-span-full text-center text-gray-600 py-12">
+                No products found in this category.
+            </p>
+        {% endfor %}
+    </div>
+{% endblock %}
